@@ -7,6 +7,17 @@ public class CubeController : MonoBehaviour
     public void ChangeAnimation(string parameter)
     {
         Debug.Log("ChangeAnimation called from JavaScript");
-        animator.SetTrigger("NextAnimation");
+        if(parameter == "")
+        {
+            animator.SetTrigger("NextAnimation");
+        }
+        if (parameter == "Dying")
+        {
+            animator.SetTrigger("dying"); 
+        }
+        if (parameter == "Reaction")
+        {
+            animator.SetTrigger("reaction");  
+        }
     }
 }
