@@ -5,16 +5,17 @@ public class AnimationController : MonoBehaviour
     private Animator animator;
 
     // Method to trigger animation based on an event
-    public void TriggerAnimation(string animationName)
+    public void ChangeAnimation(string parameter)
     {
-        // Set trigger in Animator to transition to the desired state
-        if (animationName == "Dying")
+        Debug.Log("ChangeAnimation called from JavaScript");
+        if (parameter == "Dying")
         {
             animator.SetTrigger("dying"); 
         }
-        if (animationName == "Reaction")
+        if (parameter == "Reaction")
         {
             animator.SetTrigger("reaction");  
         }
+    
     }
 }
