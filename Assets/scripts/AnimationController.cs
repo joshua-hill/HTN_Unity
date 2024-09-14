@@ -8,10 +8,13 @@ public class AnimationController : MonoBehaviour
     public void TriggerAnimation(string animationName)
     {
         // Set trigger in Animator to transition to the desired state
-        // if (animationName == "Move")
-        // {
-            animator.SetTrigger("MoveTrigger");  // Example trigger for a move event
-        // }
-        // Add more conditions for different animations as needed
+        if (animationName == "Dying")
+        {
+            animator.SetTrigger("dying"); 
+        }
+        if (animationName == "Reaction")
+        {
+            animator.SetTrigger("reaction");  
+        }
     }
 }
