@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GrannyController : MonoBehaviour
 {
-    private Animator animator;
+    public Animator animator;
 
     // Initialize the animator component
     void Start()
