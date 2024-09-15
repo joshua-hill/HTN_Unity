@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class AnimationController : MonoBehaviour
 {
@@ -8,14 +10,7 @@ public class AnimationController : MonoBehaviour
     public void ChangeAnimation(string parameter)
     {
         Debug.Log("ChangeAnimation called from JavaScript");
-        if (parameter == "Dying")
-        {
-            animator.SetTrigger("dying"); 
-        }
-        if (parameter == "Reaction")
-        {
-            animator.SetTrigger("reaction");  
-        }
-    
+        //prameter will be the trigger name in unity
+        animator.SetTrigger(parameter); 
     }
 }
